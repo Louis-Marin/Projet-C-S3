@@ -8,7 +8,7 @@ int main() {
   t_tree nouns, verbs, adjectives, adverbs;
   nouns = verbs = adjectives = adverbs = createEmptyTree();
   */
-  char filename = 'miniDico';
-  printf("Le type est %d",type_mot(filename));
-  return 0;
+for (int i = 1 ; i<=10 ; i++)
+  printf("%d\n",type_mot(i));
+return 0;
 }
