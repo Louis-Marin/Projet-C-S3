@@ -3,6 +3,7 @@
 #include "functions.h"
 #include "tree.h"
 #include "node.h"
+
 /*
 t_tree createEmptyTree(){
     t_tree tree;
