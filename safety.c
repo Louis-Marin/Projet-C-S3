@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-
+/*
 int type_mot(int line_number) 
 {
   char type_dico;
@@ -39,7 +39,7 @@ int type_mot(int line_number)
     }
     if (feof(file))
       break;
-  } while (1);
+  } while (1); 
 
   fclose(file);
   switch (type_dico) {
@@ -53,3 +53,5 @@ int type_mot(int line_number)
     return 4;
   }
 }
+
+*/

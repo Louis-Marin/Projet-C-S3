@@ -6,10 +6,13 @@ structures pour nodes/tree (damien) DONE
 Créer les tree (bug donc demander à la prof) (damien) DONE
 parcourir le tree pour rajouter une lettre au bon endroit (louis) DONE
 Ouvrir un fichier et le parcourir (partie de vianney) DONE
-analyser les mots du fichier txt par type (vianney) DONE
-Extraires les données du fichier texte (vianney)
-rajouter les mots à l'arbre
 structures des formes fléchies (damien) DONE
 
 
 Partie II:
+analyser les mots du fichier txt par type (vianney) DONE
+Extraires les données du fichier texte (vianney) DONE 90%
+Fonction random word (damien x louis) DONE
+Fonction findword (damien x louis) DONE
+rajouter les mots à l'arbre
+règles de grammaires

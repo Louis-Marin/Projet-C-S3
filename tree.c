@@ -3,7 +3,7 @@
 #include "functions.h"
 #include "tree.h"
 #include "node.h"
-
+/*
 t_tree createEmptyTree(){
     t_tree tree;
     p_letter_node new = createEmptyNode();
@@ -14,11 +14,11 @@ t_tree createEmptyTree(){
 void insert(t_tree tree, char* word) {
   p_letter_node current = tree.root;
   for (int i = 0; i < str_size(word); i++) {
-    if (current->children[word[i]] == NULL){
-      current->children[word[i]] = createEmptyNode();
-      current->children[word[i]]->letter = word[i];
+    if (current->children[i] == NULL){
+      current->children[i] = createEmptyNode();
+      current->children[i]->letter = word[i];
     }
-    current = current->children[word[i]];
+    current = current->children[i];
   }
   current->end = true;
   //current->Flechie->F_Flechie = Forme_Flechie;
@@ -26,3 +26,5 @@ void insert(t_tree tree, char* word) {
   //current->Flechie->genre = genre;
   //current->Flechie->nombre = nombre;
 }
+
+*/

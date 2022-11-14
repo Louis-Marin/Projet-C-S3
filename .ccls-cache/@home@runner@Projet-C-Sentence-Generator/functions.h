@@ -1,5 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int type_mot(int);
+void get_info(int);
 int str_size(char*);

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include "node.h"
-
+/*
 p_letter_node createEmptyNode(){
   p_letter_node newNode;
   newNode->end = false;
@@ -13,3 +13,4 @@ p_letter_node createEmptyNode(){
   newNode->end = false;
   return newNode;
 }
+*/
