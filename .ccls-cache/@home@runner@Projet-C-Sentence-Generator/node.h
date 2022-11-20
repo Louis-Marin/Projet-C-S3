@@ -3,9 +3,15 @@
 #include <stdbool.h>
 #define ALPHABET_SIZE 26
 
+typedef struct s_flechie{ 
+  char* word;
+  struct s_flechie *next;
+} FLECHIE;
+
 typedef struct s_node{ 
-    char letter;
-    struct s_node * children;
+  char letter;
+  struct s_node **children;
+  FLECHIE* head;
 } NODE;
 
 NODE* createNode(char letter);

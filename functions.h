@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "data.h"
 void get_info(int);
-int str_size(char*);
+void Menu();
+char* RandomWord(TREE);

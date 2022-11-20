@@ -1,18 +1,11 @@
 #include "functions.h"
-#include "tree.h"
-#include "node.h"
+#include "data.h"
 #include <string.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
 
-int str_size(char* word) {  //computes the size of a string
-    int count; 
-    for (count = 0; word[count] != '\0'; ++count);
-    return count; 
-}
-
-void get_info(int line_number) //Find the info of the words in the dictionnary
+//Find the info of the words in the dictionnary
+void get_info(int line_number) 
 {
     char flechie[26];
     char non_flechie[26];
@@ -87,28 +80,40 @@ void get_info(int line_number) //Find the info of the words in the dictionnary
 
     fclose(file);
   }
-/*
-void mainMenu(){
-  printf("----------------------\n"
-  "| Sentence Generator |\n"
-  "----------------------\n"
-  "1. Generate a Sentence\n"
-  "2. Credits\n"
-  "3. Quit Program\n"
-  "----------------------\n"
-  );
+
+
+void Menu(){
+      printf("       =====C Project=====     \n");
+    printf("=====Random Sentence Generator======\n");
+    printf("     Choose what you want to do: \n  1- Generate the trees\n  2- Look for a word in a three\n  3- Generate a random sentence\n");
+    int a=0;
+    do{printf("Menu choice: ");
+    scanf("%d", &a);
+    printf("\n");
+    }while((a!=1) && (a!=2) && (a!=3));
+    if (a==1){
+        printf("You choose option 1: Generate the trees\n");
+        printf("Sorry but we weren't able to solve all the errors in this part\nHowever, with the help of the report, you will be able to understand all the code that we did in this part\n");
+    }
+    if (a==2){
+        printf("You choose option 2: Look for a word in a tree\n");
+        printf("Sorry but we weren't able to solve all the errors in this part\nHowever, with the help of the report, you will be able to understand all the code that we did in this part\n");
+    }
+    if (a==3){
+        printf("You choose option 3: Generate a random sentence\n");
+        printf("Sorry but we weren't able to solve all the errors in this part\nHowever, with the help of the report, you will be able to understand all the code that we did in this part\n");
+    }
+  return;
 }
-*/
-
-/*
 
 
-char* RandomWord(t_tree tree){ //finds a random word in a specific tree
+
+char* RandomWord(TREE tree){ //finds a random word in a specific tree
   int i;
   srand(time(NULL));   // Initialization
   int nbr_letter = rand() %10;
   int letter = rand() %26;
-  p_letter_node node = tree.root;
+  NODE* node = tree.root;
   char* RandomWord;
   for (i=0; i<nbr_letter; i++){
     while(node->children[letter]==NULL){
@@ -124,21 +129,3 @@ char* RandomWord(t_tree tree){ //finds a random word in a specific tree
   RandomWord[i+1] = node->children[letter];
   return RandomWord;
 }
-
-int FindWord(t_tree tree){
-  char* word;
-  printf("Enter the word you want to search in the tree: \n");
-  scanf("%s", word);
-  t_letter_node node;
-  node = tree.root;
-  size = str_size(word);
-  for (int i=0; i<size; i++){
-    if (node.children[i]==NULL){
-      return 0;
-    }
-    node = node.children[i];
-  }
-  return 1;
-}
-
-*/

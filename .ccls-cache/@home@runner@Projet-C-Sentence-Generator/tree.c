@@ -1,31 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "functions.h"
 #include "tree.h"
-#include "node.h"
 
-/*
-t_tree createEmptyTree(){
-    t_tree tree;
-    p_letter_node new = createEmptyNode();
-    tree.root = new;
-    return tree;
-}
-
-void insert(t_tree tree, char* word) {
-  p_letter_node current = tree.root;
-  for (int i = 0; i < str_size(word); i++) {
-    if (current->children[i] == NULL){
-      current->children[i] = createEmptyNode();
-      current->children[i]->letter = word[i];
-    }
-    current = current->children[i];
+void insertWord(TREE* tree, char* word, char* type){
+  NODE* node;
+  if (strcmp(type,"Nom")){
+    node = tree->rootNouns;
+  } else if (strcmp(type,"Ver")){
+    node = tree->rootVerbs;
+  } else if (strcmp(type,"Adj")){
+    node = tree->rootAdjectives;
+  }  else{
+    printf("[!] Wrong word type, ending task.\n");
+    exit(101);
   }
-  current->end = true;
-  //current->Flechie->F_Flechie = Forme_Flechie;
-  //current->Flechie->temps = temps;
-  //current->Flechie->genre = genre;
-  //current->Flechie->nombre = nombre;
+  for(int i = 0; i < strlen(word); i++){
+    char chr = word[i];
+    //printf("%d", chr - 'a');
+    //printf("%c", chr);
+    if(node->children[chr - 'a'] == NULL){
+      node->children[chr - 'a'] = createNode(chr);
+    }
+    node = node->children[chr - 'a'];
+  }
 }
 
-*/
+
+
