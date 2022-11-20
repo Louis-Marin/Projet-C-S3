@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "data.h"
-void get_info(int);
+void From_Dico_to_Tree(int);
 void Menu();
 char* RandomWord(TREE);
